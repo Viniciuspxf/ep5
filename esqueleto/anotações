@@ -1,0 +1,5 @@
+void libereFilme(Filme *flm){
+    if (flm->nome != NULL)
+        free(flm->nome);
+    free(flm);
+}

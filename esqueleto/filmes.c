@@ -10,8 +10,8 @@
   SUA DISTRIBUIÇÃO. ESTOU CIENTE QUE OS CASOS DE PLÁGIO SÃO PUNIDOS COM 
   REPROVAÇÃO DIRETA NA DISCIPLINA.
 
-  Nome:
-  NUSP:
+  Nome: Vinicius Pereira Ximenes Frota
+  NUSP: 11221967
 
   IMDB: filmes.c
 
@@ -85,11 +85,15 @@ crieFilme (char dist[], int votos, float nota, char *nome, int ano)
  *  Um lista de filmes e representada por uma lista encadeada 
  *  duplamente ligada com cabeca. 
  */
-ListaFilmes *
-crieListaFilmes()
-{
-    AVISO(crieListaFilmes em filmes.c: Vixe! Ainda nao fiz essa funcao ...); 
-    return NULL;
+ListaFilmes * crieListaFilmes() {
+    ListaFilmes * novo;
+    novo = mallocSafe(sizeof(ListaFilmes));
+    novo->nFilmes = 0;
+    novo->cab = mallocSafe(sizeof(Filme));
+    novo->cab->ant = novo->cab;
+    novo->cab->prox = novo->cab;
+    novo->cab->nome = NULL;
+    return novo;
 }
 
 /*----------------------------------------------------------------------
@@ -101,10 +105,12 @@ crieListaFilmes()
  *  Esta funcao utiliza a funcao libereFilme().
  */
 
-void
-libereListaFilmes(ListaFilmes *lst)
-{
-    AVISO(libereListaFilmes em filmes.c: Vixe! Ainda nao fiz essa funcao...);
+void libereListaFilmes(ListaFilmes *lst) {
+    Filme *atual;
+    for (atual = lst->cab->prox; atual != lst->cab; atual = atual->prox)
+        libereFilme(atual);
+    free(lst->cab);
+    free(lst);
 }
 
 /*----------------------------------------------------------------------
@@ -114,10 +120,9 @@ libereListaFilmes(ListaFilmes *lst)
  *  filme e libera a area alocada.
  *
  */
-void 
-libereFilme(Filme *flm)
-{
-    AVISO(libereFilme em filmes.c: Vixe! Ainda nao fiz essa funcao...);
+void libereFilme(Filme *flm) {
+    free(flm->nome);
+    free(flm);
 }
 
 /*----------------------------------------------------------------------
@@ -130,10 +135,12 @@ libereFilme(Filme *flm)
  *  A funcao insere o filme na lista.
  *  
  */
-void 
-insiraFilme(ListaFilmes *lst, Filme *flm)
-{
-    AVISO(insiraFilme em filmes.c: Vixe! Ainda nao fiz essa funcao...);
+void  insiraFilme(ListaFilmes *lst, Filme *flm) {
+    Filme *aux = lst->cab->prox;
+    lst->cab->prox = flm;
+    flm->ant = lst->cab;
+    flm->prox = aux;
+    aux->ant = flm;
 }
 
 
@@ -158,10 +165,11 @@ insiraFilme(ListaFilmes *lst, Filme *flm)
  *  ou a funcao strCmp (util.h).
  *
  */
-Bool 
-contemFilme(ListaFilmes *lst, Filme *flm)
-{
-    AVISO(contemFilme em filme.c: Vixe! Ainda nao fiz essa funcao...);
+Bool contemFilme(ListaFilmes *lst, Filme *flm) {
+    Filme *atual;
+    for (atual = lst->cab->prox; atual != lst->cab; atual = atual->prox)
+        if (flm->nota == atual->nota && flm->ano == atual->ano && !strCmp(flm->nome,atual->nome))
+            return TRUE;
     return FALSE;
 }
 
@@ -173,10 +181,10 @@ contemFilme(ListaFilmes *lst, Filme *flm)
  *  Pre-condicao: a funcao supoe que o filme FLM esta 
  *                na lista LST.
  */
-void 
-removaFilme(ListaFilmes *lst, Filme *flm)
-{
-    AVISO(removaFilme em filmes.c: Vixe! Ainda nao fiz essa funcao...);
+void removaFilme(ListaFilmes *lst, Filme *flm) {
+    flm->ant->prox = flm->prox;
+    flm->prox->ant = flm->ant;
+    libereFilme(flm);
 }
 
 /*----------------------------------------------------------------------
@@ -211,10 +219,36 @@ removaFilme(ListaFilmes *lst, Filme *flm)
  *  ------------------------------------------------------------------
  *  Para ordenar por nome, veja a funcao strCmp em util.[h|c].
  */
-void 
-mergeSortFilmes(ListaFilmes *lst, Criterio criterio)
-{
-    AVISO(mergeSortFilmes em filmes.c:  Vixe ainda nao fiz essa funcao...);
+void mergeSortFilmes(ListaFilmes *lst, Criterio criterio) {
+    int i, n = lst->nFilmes;
+    ListaFilmes *lst2;
+    Filme *atual, *atual2;
+    if (n >= 2) {
+        atual = lst->cab->prox;
+        for(i = 1; i <= n/2; i++, atual = atual->prox);
+
+        lst2 = crieListaFilmes();
+        lst2->cab->prox = atual;
+        lst2->cab->ant = lst->cab->ant;
+
+        lst->cab->ant = atual->ant;
+        atual->ant->prox = lst->cab;
+
+        atual->ant = lst2->cab;
+        lst2->cab->ant->prox = lst2->cab;
+
+        lst->nFilmes = n/2;
+        lst2->nFilmes = n - n/2;
+
+        mergeSortFilmes(lst, criterio);
+        mergeSortFilmes(lst2, criterio);
+
+        while (!(atual == lst->cab && atual2 == lst2->cab)) {
+
+        }
+
+        free(lst2);
+    }
 }
 
 /*----------------------------------------------------------------------
