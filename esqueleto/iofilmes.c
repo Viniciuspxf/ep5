@@ -395,10 +395,10 @@ mostreFilme(Filme *flm)
  *  filmes na lista.
  * 
  */
-void 
-mostreListaFilmes(ListaFilmes *lst)
-{
-    AVISO(mostreListaFilmes:  Vixe ainda nao fiz essa funcao...);
+void mostreListaFilmes(ListaFilmes *lst) {
+    Filme *atual;
+    for (atual = lst->cab->prox; atual != lst->cab; atual = atual->prox)
+        mostreFilme(atual);
 }
 
 /*----------------------------------------------------------------------

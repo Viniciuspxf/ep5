@@ -141,6 +141,7 @@ void  insiraFilme(ListaFilmes *lst, Filme *flm) {
     flm->ant = lst->cab;
     flm->prox = aux;
     aux->ant = flm;
+    (lst->nFilmes)++;
 }
 
 
@@ -222,7 +223,7 @@ void removaFilme(ListaFilmes *lst, Filme *flm) {
 void mergeSortFilmes(ListaFilmes *lst, Criterio criterio) {
     int i, n = lst->nFilmes;
     ListaFilmes *lst2;
-    Filme *atual, *atual2;
+    Filme *atual, *atual2, *anterior, *aux;
     if (n >= 2) {
         atual = lst->cab->prox;
         for(i = 1; i <= n/2; i++, atual = atual->prox);
@@ -243,11 +244,37 @@ void mergeSortFilmes(ListaFilmes *lst, Criterio criterio) {
         mergeSortFilmes(lst, criterio);
         mergeSortFilmes(lst2, criterio);
 
-        while (!(atual == lst->cab && atual2 == lst2->cab)) {
+        atual = lst->cab->prox;
+        atual2 = lst->cab->ant;
+        anterior = lst->cab;
+        if (!criterio) {
+            while (!(atual == lst->cab && atual == lst2->cab)) {
+                if (atual2 == lst2->cab || atual->nota < atual2->nota) {
+                    anterior->prox = atual;
+                    atual->ant = anterior;
+                    anterior = atual;
+                    atual = atual->prox;
+                }
+                else {
+                    aux = atual2->ant;
+                    anterior->prox = atual2;
+                    atual2->ant = anterior;
+                    anterior = atual2;
+                    atual2 = aux;
+                }
 
+            }
+            anterior->prox = lst->cab;
+            lst->cab->ant = anterior;
         }
+        else {
+        }
+        
+        lst->nFilmes = lst->nFilmes + lst2->nFilmes;
+        atual2->prox = atual2;
+        atual2->ant = atual2;
+        libereListaFilmes(lst2);
 
-        free(lst2);
     }
 }
 

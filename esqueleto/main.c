@@ -156,8 +156,7 @@ main(int argc, char *argv[])
    
             flm = crieFilme(dist, votos, nota, nome, ano);
             mostreFilme(flm);
-            
-            /* completar essa opcao */
+            insiraFilme(lst, flm);
             break;
         }
 
@@ -194,6 +193,7 @@ main(int argc, char *argv[])
         /*---------------------------------------------*/
         case MOSTRAR:
         {
+            mostreListaFilmes(lst);
             break;
         }
 
