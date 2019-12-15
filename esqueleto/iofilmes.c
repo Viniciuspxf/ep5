@@ -397,8 +397,13 @@ mostreFilme(Filme *flm)
  */
 void mostreListaFilmes(ListaFilmes *lst) {
     Filme *atual;
-    for (atual = lst->cab->prox; atual != lst->cab; atual = atual->prox)
-        mostreFilme(atual);
+    int i;
+    if (lst != NULL) {
+        for (atual = lst->cab->prox, i = 0; atual != lst->cab; atual = atual->prox, i++)
+            mostreFilme(atual);
+        printf("mostreListaFilmes: %d (de %d) filme(s) exibido(s)", i, lst->nFilmes);
+    }
+    else printf("AVISO: mostreListaFilmes: lista de filmes vazia");
 }
 
 /*----------------------------------------------------------------------
@@ -420,7 +425,7 @@ void mostreListaFilmes(ListaFilmes *lst) {
 void mostreMelhoresFilmes(ListaFilmes *lst) {
     int N, V, i;
     double X;
-    Filme *atual = lst->cab->ant;
+    Filme *atual = lst->cab->prox;
     printf("Qual o numero de filmes a serem mostrados: ");
     scanf("%d", &N);
     printf("Qual a nota maxima: ");
@@ -428,11 +433,13 @@ void mostreMelhoresFilmes(ListaFilmes *lst) {
     printf("Qual o número mínimo de votos: ");
     scanf("%d", &V);
 
-    for (i = 0; i < N && atual != lst->cab; i++, atual = atual->ant) {
+    for (i = 0; i < N && atual != lst->cab; i++, atual = atual->prox) {
         if (atual->nota <= N && atual->votos >= V) 
             mostreFilme(atual);
         else i--;
     }
+    printf("--------------------------------------------------------------------------------\n");
+    printf("Esses sao os %d melhores filmes com nota menor que %f e pelo menos %d votos\n", i, X, V);
 }
 
 /*----------------------------------------------------------------------
@@ -454,7 +461,7 @@ void mostreMelhoresFilmes(ListaFilmes *lst) {
 void mostrePioresFilmes(ListaFilmes *lst) {
     int N, V, i;
     double X;
-    Filme *atual = lst->cab->prox;
+    Filme *atual = lst->cab->ant;
     printf("Qual o numero de filmes a serem mostrados: ");
     scanf("%d", &N);
     printf("Qual a nota minima: ");
@@ -462,9 +469,11 @@ void mostrePioresFilmes(ListaFilmes *lst) {
     printf("Qual o número mínimo de votos: ");
     scanf("%d", &V);
 
-    for (i = 0; i < N && atual != lst->cab; i++, atual = atual->prox) {
+    for (i = 0; i < N && atual != lst->cab; i++, atual = atual->ant) {
         if (atual->nota >= N && atual->votos >= V) 
             mostreFilme(atual);
         else i--;
     }
+    printf("--------------------------------------------------------------------------------\n");
+    printf("Esses sao os %d piores filmes com nota menor que %f e pelo menos %d votos\n", i, X, V);
 }

@@ -198,6 +198,7 @@ main(int argc, char *argv[])
         case ORDENAR_NOTA_M:
         {
             mergeSortFilmes(lst, NOTA);
+            printf("Lista de filmes ordenada por nota.");
             break;
         }
 
@@ -205,6 +206,7 @@ main(int argc, char *argv[])
         case ORDENAR_NOME_M:
         {
             mergeSortFilmes(lst, NOME);
+            printf("Lista de filmes ordenada por nome.");
             break;
         }
 
@@ -230,14 +232,14 @@ main(int argc, char *argv[])
         /*---------------------------------------------*/
         case MOSTRAR_MENOR:
         {
-            mostrePioresFilmes(lst);
+            mostreMelhoresFilmes(lst);
             break;
         }
 
         /*---------------------------------------------*/
         case MOSTRAR_MAIOR:
         {
-            mostreMelhoresFilmes(lst);
+            mostrePioresFilmes(lst);
             break;
         }
       
@@ -245,6 +247,8 @@ main(int argc, char *argv[])
         case LIMPAR:
         {
             libereListaFilmes(lst);
+            lst = NULL;
+            printf("Lista de filmes foi limpa");
             break;
         }
 

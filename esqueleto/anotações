@@ -18,3 +18,7 @@ Thor: The Dark World
 7.2
 271146
 0..0004211
+
+testar outras entradas
+colocar os possíveis \n que falta
+usar o valgrind pra testar

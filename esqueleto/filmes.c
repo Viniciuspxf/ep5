@@ -144,6 +144,7 @@ void  insiraFilme(ListaFilmes *lst, Filme *flm) {
     flm->prox = aux;
     aux->ant = flm;
     (lst->nFilmes)++;
+    printf("Filme inserido na lista de filmes");
 }
 
 
