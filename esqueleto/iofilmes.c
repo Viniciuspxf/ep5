@@ -417,10 +417,22 @@ void mostreListaFilmes(ListaFilmes *lst) {
  *  ordem crescente de nota.
  */
 
-void 
-mostreMelhoresFilmes(ListaFilmes *lst)
-{
-    AVISO(mostreMelhores:  Vixe ainda nao fiz essa funcao...);
+void mostreMelhoresFilmes(ListaFilmes *lst) {
+    int N, V, i;
+    double X;
+    Filme *atual = lst->cab->ant;
+    printf("Qual o numero de filmes a serem mostrados: ");
+    scanf("%d", &N);
+    printf("Qual a nota maxima: ");
+    scanf("%lf", &X);
+    printf("Qual o número mínimo de votos: ");
+    scanf("%d", &V);
+
+    for (i = 0; i < N && atual != lst->cab; i++, atual = atual->ant) {
+        if (atual->nota <= N && atual->votos >= V) 
+            mostreFilme(atual);
+        else i--;
+    }
 }
 
 /*----------------------------------------------------------------------
@@ -439,8 +451,20 @@ mostreMelhoresFilmes(ListaFilmes *lst)
  *  ordem crescente de nota.
  * 
  */
-void 
-mostrePioresFilmes(ListaFilmes *lst)
-{
-    AVISO(mostrePiores:  Vixe ainda nao fiz essa funcao...);
+void mostrePioresFilmes(ListaFilmes *lst) {
+    int N, V, i;
+    double X;
+    Filme *atual = lst->cab->prox;
+    printf("Qual o numero de filmes a serem mostrados: ");
+    scanf("%d", &N);
+    printf("Qual a nota minima: ");
+    scanf("%lf", &X);
+    printf("Qual o número mínimo de votos: ");
+    scanf("%d", &V);
+
+    for (i = 0; i < N && atual != lst->cab; i++, atual = atual->prox) {
+        if (atual->nota >= N && atual->votos >= V) 
+            mostreFilme(atual);
+        else i--;
+    }
 }

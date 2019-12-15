@@ -5,3 +5,16 @@ void libereFilme(Filme *flm){
 }
 
 mostreListaFilmes: 3 (de 3) filme(s) exibido(s)
+
+procurar, remover
+
+linha 31: include da biblioteca do strlen
+
+c
+03-filmes.list
+i
+Thor: The Dark World
+2013
+7.2
+271146
+0..0004211

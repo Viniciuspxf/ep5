@@ -57,10 +57,16 @@
  * (minusculas). Assim, a busca deve ser 'case insensitive'.
  *
  */
-Bool
-achePalavra(unsigned char *pal, int tPal, unsigned char *texto, int tTex)
-{
-    AVISO(achePalavra em util.c: Vixe! Ainda nao fiz essa funcao...);
+Bool achePalavra(unsigned char *pal, int tPal, unsigned char *texto, int tTex) {
+    int i, k;
+    k = tPal - 1;
+    while (k < tTex) {
+        i = 0;
+        while (i < tPal && tolower(texto[k-i]) == tolower(pal[tPal - 1 - i]))
+            i++;
+        if (i == tPal) return TRUE;
+        k++;
+    }
     return FALSE;
 }
 

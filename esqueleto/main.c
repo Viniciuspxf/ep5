@@ -28,7 +28,7 @@
 
 #include <stdio.h>  /* printf(), scanf() */ 
 #include <time.h>   /* CLOCKS_PER_SECOND */
-
+#include <string.h>
 #include "main.h"
 
 #include "filmes.h"   /* crieListaFilmes(), crieFilme(), 
@@ -54,9 +54,11 @@ int
 main(int argc, char *argv[])
 {
     ListaFilmes *lst = crieListaFilmes(); 
-    char         opcao;
+    Filme *atual;
+    char opcao, str[256];
     clock_t start, end; /* usadas para medir tempo de processamento */
     double elapsed;
+    int n;
     /* declaracao das demais variaveis do main */
 
     /*------------------------------------------------------------*/
@@ -101,6 +103,17 @@ main(int argc, char *argv[])
         /*---------------------------------------------*/
         case PROCURAR:
         {
+            printf("Digite parte do nome do filme a ser procurado: ");
+            n = leiaString(str, 256);
+            for (atual = lst->cab->prox; atual != lst->cab; atual = atual->prox) {
+                if (achePalavra((uchar *) str, n, (uchar *) atual->nome, strlen(atual->nome))) {
+                    mostreFilme(atual);
+                    printf("Esse e o filme procurado? [s/n/x] (x para sair): ");
+                    scanf("%c", &opcao);
+                    if (opcao == 's') break;
+                    else if (opcao == 'x') break;
+                }
+            }
             break;
         }
 
@@ -163,12 +176,28 @@ main(int argc, char *argv[])
         /*---------------------------------------------*/
         case REMOVER:
         {
+            printf("Digite parte do nome do filme a ser procurado: ");
+            n = leiaString(str, 256);
+            for (atual = lst->cab->prox; atual != lst->cab; atual = atual->prox) {
+                if (achePalavra((uchar *) str, n, (uchar *) atual->nome, strlen(atual->nome))) {
+                    mostreFilme(atual);
+                    printf("Esse e o filme procurado? [s/n/x] (x para sair): ");
+                    scanf("%c", &opcao);
+                    if (opcao == 's'){
+                        removaFilme(atual);
+                        printf("Filme removido");
+                        break;
+                    }
+                    else if (opcao == 'x') break;
+                }
+            }
             break;
         }
 
         /*---------------------------------------------*/
         case ORDENAR_NOTA_M:
         {
+            mergeSortFilmes(lst, NOTA);
             break;
         }
 
@@ -200,18 +229,21 @@ main(int argc, char *argv[])
         /*---------------------------------------------*/
         case MOSTRAR_MENOR:
         {
+            mostrePioresFilmes(lst);
             break;
         }
 
         /*---------------------------------------------*/
         case MOSTRAR_MAIOR:
         {
+            mostreMelhoresFilmes(lst);
             break;
         }
       
         /*---------------------------------------------*/
         case LIMPAR:
         {
+            libereListaFilmes(lst);
             break;
         }
 
