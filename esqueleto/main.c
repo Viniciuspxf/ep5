@@ -184,7 +184,7 @@ main(int argc, char *argv[])
                     printf("Esse e o filme procurado? [s/n/x] (x para sair): ");
                     scanf("%c", &opcao);
                     if (opcao == 's'){
-                        removaFilme(atual);
+                        removaFilme(lst, atual);
                         printf("Filme removido");
                         break;
                     }
@@ -204,6 +204,7 @@ main(int argc, char *argv[])
         /*---------------------------------------------*/
         case ORDENAR_NOME_M:
         {
+            mergeSortFilmes(lst, NOME);
             break;
         }
 

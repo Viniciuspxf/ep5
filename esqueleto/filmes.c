@@ -40,6 +40,8 @@
 #include "st.h"      /* freeST(), initST(), putFilmeST(), getFilmeST(),
                         showST(), freeST() */
 
+#define compara(atual, atual2, crit) (crit ? strCmp(atual->nome, atual2->nome) < 0 : atual->nota > atual2->nota)
+
 /*----------------------------------------------------------------------
  *  crieFilme
  *
@@ -185,6 +187,7 @@ Bool contemFilme(ListaFilmes *lst, Filme *flm) {
 void removaFilme(ListaFilmes *lst, Filme *flm) {
     flm->ant->prox = flm->prox;
     flm->prox->ant = flm->ant;
+    (lst->nFilmes)--;
     libereFilme(flm);
 }
 
@@ -247,27 +250,25 @@ void mergeSortFilmes(ListaFilmes *lst, Criterio criterio) {
         atual = lst->cab->prox;
         atual2 = lst2->cab->prox;
         anterior = lst->cab;
-        if (!criterio) {
-            while (!(atual == lst->cab && atual2 == lst2->cab)) {
-                if ((atual != lst->cab && atual2 != lst2->cab && atual->nota > atual2->nota) || atual2 == lst2->cab) {
-                    anterior->prox = atual;
-                    atual->ant = anterior;
-                    anterior = atual;
-                    atual = atual->prox;
-                }
-                else {
-                    anterior->prox = atual2;
-                    atual2->ant = anterior;
-                    anterior = atual2;
-                    atual2 = atual2->prox;
-                }
 
+        while (!(atual == lst->cab && atual2 == lst2->cab)) {
+            if ((atual != lst->cab && atual2 != lst2->cab && compara(atual, atual2, criterio)) || atual2 == lst2->cab) {
+                anterior->prox = atual;
+                atual->ant = anterior;
+                anterior = atual;
+                atual = atual->prox;
             }
-            anterior->prox = lst->cab;
-            lst->cab->ant = anterior;
+            else {
+                anterior->prox = atual2;
+                atual2->ant = anterior;
+                anterior = atual2;
+                atual2 = atual2->prox;
+            }
+
         }
-        else {
-        }
+        anterior->prox = lst->cab;
+        lst->cab->ant = anterior;
+ 
         
         lst->nFilmes = lst->nFilmes + lst2->nFilmes;
         atual2->prox = atual2;
