@@ -1,0 +1,495 @@
+MAC0121 2019 - EP5
+The Internet Movie Database (Dec 15 2019, 15:04:54)
+[GCC 8.3.0] on linux
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: carregueLista: Digite o nome do arquivo: carregueLista: Nome do arquivo de entrada: '03-filmes.list'
+--------------------------------------------------------------------------------
+carregueFilme: relatorio da leitura do arquivo '03-filmes.list'
+   no. linhas = 3
+   no. linhas ignoradas = 0
+   no. erros em votos ou nota = 0
+   no. erros no ano = 0
+   no. anos ignorados = 0
+   no. filmes repetidos = 0
+   no. filmes inseridos na lista = 3
+   no. filmes na lista = 3
+carregueFilmes: leitura concluida
+--------------------------------------------------------------------------------
+
+(4.2e-05 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Digite o nome do filme: AVISO: leiaString: string lido 'Thor: The Dark World' tem 20 caracteres
+Digite o ano: Digite a nota: Digite o numero de votos: Digite a distribuicao: AVISO: leiaString: string lido '0..0004211' tem 10 caracteres
+--------------------------------------------------------------------------------
+Thor: The Dark World (ano 2013):
+	 nota  7.2 	 271146 votos 	 distribuicao [0..0004211] 
+Filme inserido na lista de filmes
+
+(8e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: --------------------------------------------------------------------------------
+Thor: The Dark World (ano 2013):
+	 nota  7.2 	 271146 votos 	 distribuicao [0..0004211] 
+--------------------------------------------------------------------------------
+"Alsaciens - ou les deux Mathilde, Les" (ano 1996):
+	 nota  4.7 	     19 votos 	 distribuicao [1..0..2103] 
+--------------------------------------------------------------------------------
+Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Hellbound, Flesh-Eating Subhumanoid Zombified Living Dead, Part 3 (ano 2005):
+	 nota  2.8 	      5 votos 	 distribuicao [8........2] 
+--------------------------------------------------------------------------------
+Adrienne Clarkson Presents: A Tribute to Peppiatt & Aylesworth: Canada's First Television Comedy Team (ano 1996):
+	 nota  8.7 	      6 votos 	 distribuicao [.....3...6] 
+--------------------------------------------------------------------------------
+mostreListaFilmes: 4 (de 4) filme(s) exibido(s)
+
+(2.9e-05 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Lista de filmes ordenada por nota.
+
+(3e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: --------------------------------------------------------------------------------
+Adrienne Clarkson Presents: A Tribute to Peppiatt & Aylesworth: Canada's First Television Comedy Team (ano 1996):
+	 nota  8.7 	      6 votos 	 distribuicao [.....3...6] 
+--------------------------------------------------------------------------------
+Thor: The Dark World (ano 2013):
+	 nota  7.2 	 271146 votos 	 distribuicao [0..0004211] 
+--------------------------------------------------------------------------------
+"Alsaciens - ou les deux Mathilde, Les" (ano 1996):
+	 nota  4.7 	     19 votos 	 distribuicao [1..0..2103] 
+--------------------------------------------------------------------------------
+Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Hellbound, Flesh-Eating Subhumanoid Zombified Living Dead, Part 3 (ano 2005):
+	 nota  2.8 	      5 votos 	 distribuicao [8........2] 
+--------------------------------------------------------------------------------
+mostreListaFilmes: 4 (de 4) filme(s) exibido(s)
+
+(2.1e-05 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Lista de filmes ordenada por nome.
+
+(2e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: --------------------------------------------------------------------------------
+"Alsaciens - ou les deux Mathilde, Les" (ano 1996):
+	 nota  4.7 	     19 votos 	 distribuicao [1..0..2103] 
+--------------------------------------------------------------------------------
+Adrienne Clarkson Presents: A Tribute to Peppiatt & Aylesworth: Canada's First Television Comedy Team (ano 1996):
+	 nota  8.7 	      6 votos 	 distribuicao [.....3...6] 
+--------------------------------------------------------------------------------
+Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Hellbound, Flesh-Eating Subhumanoid Zombified Living Dead, Part 3 (ano 2005):
+	 nota  2.8 	      5 votos 	 distribuicao [8........2] 
+--------------------------------------------------------------------------------
+Thor: The Dark World (ano 2013):
+	 nota  7.2 	 271146 votos 	 distribuicao [0..0004211] 
+--------------------------------------------------------------------------------
+mostreListaFilmes: 4 (de 4) filme(s) exibido(s)
+
+(5e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Digite parte do nome do filme a ser procurado: AVISO: leiaString: string lido 'thor' tem 4 caracteres
+--------------------------------------------------------------------------------
+Thor: The Dark World (ano 2013):
+	 nota  7.2 	 271146 votos 	 distribuicao [0..0004211] 
+Esse e o filme procurado? [s/n/x] (x para sair): 
+(9e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Digite parte do nome do filme a ser procurado: AVISO: leiaString: string lido 'thor' tem 4 caracteres
+--------------------------------------------------------------------------------
+Thor: The Dark World (ano 2013):
+	 nota  7.2 	 271146 votos 	 distribuicao [0..0004211] 
+Esse e o filme procurado? [s/n/x] (x para sair): 
+Filme nao encontrado
+
+(8e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Digite parte do nome do filme a ser procurado: AVISO: leiaString: string lido 'a' tem 1 caracteres
+--------------------------------------------------------------------------------
+"Alsaciens - ou les deux Mathilde, Les" (ano 1996):
+	 nota  4.7 	     19 votos 	 distribuicao [1..0..2103] 
+Esse e o filme procurado? [s/n/x] (x para sair): 
+(3e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Digite parte do nome do filme a ser procurado: AVISO: leiaString: string lido 'a' tem 1 caracteres
+--------------------------------------------------------------------------------
+"Alsaciens - ou les deux Mathilde, Les" (ano 1996):
+	 nota  4.7 	     19 votos 	 distribuicao [1..0..2103] 
+Esse e o filme procurado? [s/n/x] (x para sair): --------------------------------------------------------------------------------
+Adrienne Clarkson Presents: A Tribute to Peppiatt & Aylesworth: Canada's First Television Comedy Team (ano 1996):
+	 nota  8.7 	      6 votos 	 distribuicao [.....3...6] 
+Esse e o filme procurado? [s/n/x] (x para sair): 
+(1.5e-05 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Digite parte do nome do filme a ser procurado: AVISO: leiaString: string lido 'a' tem 1 caracteres
+--------------------------------------------------------------------------------
+"Alsaciens - ou les deux Mathilde, Les" (ano 1996):
+	 nota  4.7 	     19 votos 	 distribuicao [1..0..2103] 
+Esse e o filme procurado? [s/n/x] (x para sair): 
+Filme nao encontrado
+
+(3e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Digite parte do nome do filme a ser procurado: AVISO: leiaString: string lido 'a' tem 1 caracteres
+--------------------------------------------------------------------------------
+"Alsaciens - ou les deux Mathilde, Les" (ano 1996):
+	 nota  4.7 	     19 votos 	 distribuicao [1..0..2103] 
+Esse e o filme procurado? [s/n/x] (x para sair): --------------------------------------------------------------------------------
+Adrienne Clarkson Presents: A Tribute to Peppiatt & Aylesworth: Canada's First Television Comedy Team (ano 1996):
+	 nota  8.7 	      6 votos 	 distribuicao [.....3...6] 
+Esse e o filme procurado? [s/n/x] (x para sair): --------------------------------------------------------------------------------
+Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Hellbound, Flesh-Eating Subhumanoid Zombified Living Dead, Part 3 (ano 2005):
+	 nota  2.8 	      5 votos 	 distribuicao [8........2] 
+Esse e o filme procurado? [s/n/x] (x para sair): --------------------------------------------------------------------------------
+Thor: The Dark World (ano 2013):
+	 nota  7.2 	 271146 votos 	 distribuicao [0..0004211] 
+Esse e o filme procurado? [s/n/x] (x para sair): 
+Filme nao encontrado
+
+(1.8e-05 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Lista de filmes foi limpa
+
+(1e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: AVISO: mostreListaFilmes: lista de filmes vazia
+
+(1e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: 
+(1e-06 segundos)
+AVISO: freeST em st.c: Vixe! Ainda nao fiz essa funcao ...

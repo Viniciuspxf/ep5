@@ -4,21 +4,7 @@ void libereFilme(Filme *flm){
     free(flm);
 }
 
-mostreListaFilmes: 3 (de 3) filme(s) exibido(s)
-
-procurar, remover
-
-linha 31: include da biblioteca do strlen
-
-c
-03-filmes.list
-i
-Thor: The Dark World
-2013
-7.2
-271146
-0..0004211
-
-testar outras entradas
-colocar os possíveis \n que falta
 usar o valgrind pra testar
+testar outras entradas
+testar comando de gravar
+testar c e C

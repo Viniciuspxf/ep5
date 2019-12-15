@@ -109,11 +109,15 @@ main(int argc, char *argv[])
                 if (achePalavra((uchar *) str, n, (uchar *) atual->nome, strlen(atual->nome))) {
                     mostreFilme(atual);
                     printf("Esse e o filme procurado? [s/n/x] (x para sair): ");
-                    scanf("%c", &opcao);
+                    scanf(" %c", &opcao);
                     if (opcao == 's') break;
                     else if (opcao == 'x') break;
                 }
             }
+            if (opcao != 's') {
+                printf("\nFilme nao encontrado\n");
+            }
+            opcao = 's';
             break;
         }
 
@@ -170,6 +174,7 @@ main(int argc, char *argv[])
             flm = crieFilme(dist, votos, nota, nome, ano);
             mostreFilme(flm);
             insiraFilme(lst, flm);
+            printf("Filme inserido na lista de filmes\n");
             break;
         }
 
@@ -182,15 +187,19 @@ main(int argc, char *argv[])
                 if (achePalavra((uchar *) str, n, (uchar *) atual->nome, strlen(atual->nome))) {
                     mostreFilme(atual);
                     printf("Esse e o filme procurado? [s/n/x] (x para sair): ");
-                    scanf("%c", &opcao);
+                    scanf(" %c", &opcao);
                     if (opcao == 's'){
                         removaFilme(lst, atual);
-                        printf("Filme removido");
+                        printf("Filme removido\n");
                         break;
                     }
                     else if (opcao == 'x') break;
                 }
             }
+            if (opcao != 's') {
+                printf("\nFilme nao encontrado\n");
+            }
+            opcao = 's';
             break;
         }
 
@@ -198,7 +207,7 @@ main(int argc, char *argv[])
         case ORDENAR_NOTA_M:
         {
             mergeSortFilmes(lst, NOTA);
-            printf("Lista de filmes ordenada por nota.");
+            printf("Lista de filmes ordenada por nota.\n");
             break;
         }
 
@@ -206,7 +215,7 @@ main(int argc, char *argv[])
         case ORDENAR_NOME_M:
         {
             mergeSortFilmes(lst, NOME);
-            printf("Lista de filmes ordenada por nome.");
+            printf("Lista de filmes ordenada por nome.\n");
             break;
         }
 
@@ -248,7 +257,7 @@ main(int argc, char *argv[])
         {
             libereListaFilmes(lst);
             lst = NULL;
-            printf("Lista de filmes foi limpa");
+            printf("Lista de filmes foi limpa\n");
             break;
         }
 

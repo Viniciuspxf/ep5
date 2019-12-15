@@ -1,0 +1,135 @@
+MAC0121 2019 - EP5
+The Internet Movie Database (Nov 17 2019, 22:42:04)
+[GCC 8.3.0] on linux
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: carregueLista: Digite o nome do arquivo: carregueLista: Nome do arquivo de entrada: '04-filmes.list'
+--------------------------------------------------------------------------------
+carregueFilme: relatorio da leitura do arquivo '04-filmes.list'
+   no. linhas = 4
+   no. linhas ignoradas = 0
+   no. erros em votos ou nota = 0
+   no. erros no ano = 0
+   no. anos ignorados = 0
+   no. filmes repetidos = 0
+   no. filmes inseridos na lista = 4
+   no. filmes na lista = 4
+carregueFilmes: leitura concluida
+--------------------------------------------------------------------------------
+
+(0.000133 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: --------------------------------------------------------------------------------
+Memento (ano 2000):
+	 nota  8.7 	 101176 votos 	 distribuicao [0000000123] 
+--------------------------------------------------------------------------------
+Memento (ano 2000):
+	 nota  8.7 	 101176 votos 	 distribuicao [0000000123] 
+--------------------------------------------------------------------------------
+Memento (ano 2000):
+	 nota  8.7 	 101176 votos 	 distribuicao [0000000123] 
+--------------------------------------------------------------------------------
+Memento (ano 2000):
+	 nota  8.7 	 101176 votos 	 distribuicao [0000000123] 
+--------------------------------------------------------------------------------
+mostreListaFilmes: 4 (de 4) filme(s) exibido(s)
+
+(8e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: Lista de filmes foi limpa
+
+(3e-06 segundos)
+
+======================================================================
+  (c) carregar um arquivo de dados sem eliminar repeticoes
+  (C) carregar um arquivo de dados eliminando repeticoes
+  (g) gravar   a lista atual em um arquivo
+  (p) procurar a nota de um filme
+  (h) criar    a  TS com as palavras em nomes de filmes (opcional)
+  (P) procurar na TS a nota de um filme (opcional)
+  (M) mostrar  a  TS (opcional)
+  (L) limpar   a  TS (opcional)
+  (i) inserir  um filme
+  (r) remover  um filme
+  (o) ordenar  a lista de filmes por nota (mergeSort)
+  (O) ordenar  a lista de filmes por nome (mergeSort)
+  (q) ordenar  a lista de filmes por nota (quickSort, opcional)
+  (Q) ordenar  a lista de filmes por nome (quickSort, opcional)
+  (m) mostrar  todos os filmes
+  (<) mostrar  N filmes com nota _menor_ que X e pelo menos V votos
+  (>) mostrar  N filmes com nota _maior_ que X e pelo menos V votos
+  (l) limpar   a lista de filmes
+  (x) sair     do programa
+
+Digite uma opcao: 
+(1e-06 segundos)
+
+----------------------------------------------------------------------
+Mensagem dos nossos patrocinadores:
+
+I put instant coffee in a microwave and almost went back in time.
+		-- Steven Wright
+
+Digite ENTER para continuar. 

@@ -1,0 +1,19 @@
+#!/bin/bash
+cd esqueleto
+make
+cat ../entrada | ./imdb > ../minhasaida
+cd .. 
+cd executaveis
+cat ../entrada | ./imdb-linux > ../saidaprofessora
+cd ..
+
+for i in 2 3 4
+do
+cd esqueleto
+make
+cat ../entrada$i | ./imdb > ../minhasaida$i
+cd .. 
+cd executaveis
+cat ../entrada$i| ./imdb-linux > ../saidaprofessora$i
+cd ..
+done

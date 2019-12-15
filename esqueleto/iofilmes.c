@@ -401,9 +401,10 @@ void mostreListaFilmes(ListaFilmes *lst) {
     if (lst != NULL) {
         for (atual = lst->cab->prox, i = 0; atual != lst->cab; atual = atual->prox, i++)
             mostreFilme(atual);
-        printf("mostreListaFilmes: %d (de %d) filme(s) exibido(s)", i, lst->nFilmes);
+        LINHA;
+        printf("mostreListaFilmes: %d (de %d) filme(s) exibido(s)\n", i, lst->nFilmes);
     }
-    else printf("AVISO: mostreListaFilmes: lista de filmes vazia");
+    else printf("AVISO: mostreListaFilmes: lista de filmes vazia\n");
 }
 
 /*----------------------------------------------------------------------
@@ -434,7 +435,7 @@ void mostreMelhoresFilmes(ListaFilmes *lst) {
     scanf("%d", &V);
 
     for (i = 0; i < N && atual != lst->cab; i++, atual = atual->prox) {
-        if (atual->nota <= N && atual->votos >= V) 
+        if (atual->nota <= X && atual->votos >= V) 
             mostreFilme(atual);
         else i--;
     }
@@ -470,10 +471,10 @@ void mostrePioresFilmes(ListaFilmes *lst) {
     scanf("%d", &V);
 
     for (i = 0; i < N && atual != lst->cab; i++, atual = atual->ant) {
-        if (atual->nota >= N && atual->votos >= V) 
+        if (atual->nota >= X && atual->votos >= V) 
             mostreFilme(atual);
         else i--;
     }
     printf("--------------------------------------------------------------------------------\n");
-    printf("Esses sao os %d piores filmes com nota menor que %f e pelo menos %d votos\n", i, X, V);
+    printf("Esses sao os %d piores filmes com nota maior que %f e pelo menos %d votos\n", i, X, V);
 }
